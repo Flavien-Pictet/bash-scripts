@@ -2,7 +2,7 @@
 
 This bash script will create a new private repository on your GitHub account with the provided name and initialize it with the following structure:
 
-![Project structure](DataScience_repo/structure.png)
+![Structure du projet](./structure.png)
 
 
 ## Prerequisites
