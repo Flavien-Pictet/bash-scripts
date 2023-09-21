@@ -31,4 +31,5 @@ You can install these dependencies by following the links provided.
 
 5. Run the script with your desired repository name as an argument :
 
-./data_science_repo.sh my_new_repo
+   ```bash
+    ./data_science_repo.sh my_new_repo
