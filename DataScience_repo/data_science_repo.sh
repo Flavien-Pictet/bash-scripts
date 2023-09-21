@@ -1,8 +1,5 @@
 #!/bin/bash
 
-## This script allows you to create a new GitHub repository for data science projects with all the
-## necessary files and folders for a faster start.
-
 # Check if Git is installed
 
 if ! command -v git &> /dev/null; then
