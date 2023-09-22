@@ -18,7 +18,7 @@ You can install these dependencies by following the links provided.
 
 1. Clone this repository or download the `data_science_repo.sh` script.
 
-2. Make sure you have set up the following environment variables in your `.zshrc` (or `.bashrc`)file with your GitHub username and Personal Access Token :
+2. Make sure you have set up the following environment variables in your `.zshrc` (or `.bashrc`) file with your GitHub username and Personal Access Token :
 
     ```bash
     export GITHUB_USERNAME="your_github_username"
