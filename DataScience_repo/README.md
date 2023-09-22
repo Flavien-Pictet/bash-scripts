@@ -24,11 +24,10 @@ You can install these dependencies by following the links provided.
     export GITHUB_USERNAME="your_github_username"
     export GITHUB_TOKEN="your_github_token"
 
-3. To ensure that you can execute the script from any directory, add the script's location to your system's PATH. To do this, add the following line to your .zshrc (or .bashrc) file, replacing /path/to/script/directory with the actual path to the directory containing data_science_repo.sh:
+3. To ensure that you can execute the script from any directory, add an alias with the full script path to your system's PATH. Open your .zshrc (or .bashrc) file and add the      following line, replacing /path/to/script/directory with the actual path to the directory containing data_science_repo.sh:
 
     ```bash
-    export PATH="/path/to/script/directory:$PATH"
-    You can find the path to the script's directory by running pwd in the directory where the script is located.
+    alias dsr="/path/to/script/directory/data_science_repo.sh"
 
 4. Make the script executable by running the following command in your terminal:
 
