@@ -1,12 +1,19 @@
 #!/bin/bash
 
-MAX=98          # Maximum CPU usage threshold (percentage)
-EMAIL=$CPU_SCRIPT_MAIL   # Email address to send alerts
+# Author : Flavien-Pictet
 
-# Get current CPU usage with the "top" command
-USAGE=$(top -n 1 -l 1 -o cpu | grep "CPU usage" | awk '{print $3}' | cut -d '%' -f 1)
+MAX=98                  # Maximum CPU usage threshold (percentage)
+EMAIL=$CPU_SCRIPT_MAIL # Email address to send alerts
 
-# Check if CPU usage exceeds the defined threshold
-if [ "$USAGE" -gt "$MAX" ]; then
-  echo "CPU Usage: $USAGE%" | mail -s "High CPU Usage Alert" $EMAIL
-fi
+while true; do
+  # Get current CPU usage with the "top" command and extract the CPU percentage
+  USAGE=$(top -n 1 -l 1 -o cpu | grep -Eo 'CPU usage: [0-9]+[.][0-9]+' | cut -d ' ' -f 3)
+
+  # Check if CPU usage exceeds the defined threshold
+  if (( $(echo "$USAGE > $MAX" | bc -l) )); then
+    echo "CPU Usage: $USAGE%" | mail -s "High CPU Usage Alert" $EMAIL
+    break  # Exit the loop once the condition is met
+  fi
+
+  sleep 60  # Sleep for 60 seconds before checking again (adjust as needed)
+done
