@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Author: Flavien-Pictet
+# Author : Flavien-Pictet
 
 MAX=98                  # Maximum CPU usage threshold (percentage)
 EMAIL=$CPU_SCRIPT_MAIL # Email address to send alerts
